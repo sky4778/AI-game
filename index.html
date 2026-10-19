@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#100e13">
+<title>黯境編年史：失落王國</title>
+<style>
+:root{--bg:#100e13;--panel:#19161e;--panel2:#211c26;--line:#403341;--text:#e7dfd2;--muted:#a99aaa;--red:#b94d57;--gold:#c6a66b;--violet:#8872a8;--green:#82a58c;--shadow:0 14px 38px #0008}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% -10%,#382638 0,#17131b 38%,var(--bg) 78%);color:var(--text);font:16px/1.65 Georgia,"Noto Serif TC","Microsoft JhengHei",serif;min-height:100vh}button,input,select{font:inherit}button{cursor:pointer;color:var(--text);background:#302533;border:1px solid #665064;border-radius:7px;padding:10px 14px;transition:.18s}button:hover:not(:disabled){background:#493447;border-color:var(--gold);transform:translateY(-1px)}button:disabled{opacity:.4;cursor:not-allowed}.primary{background:#6f343e;border-color:#b65d67}.primary:hover:not(:disabled){background:#8a3f4a}.gold{border-color:#9a7c48;color:#ead2a1}.danger{border-color:#85434b}.small{padding:6px 10px;font-size:.9rem}.shell{max-width:1180px;margin:auto;padding:20px}.topbar{display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:1px solid var(--line);padding:8px 0 16px;margin-bottom:18px}.brand{letter-spacing:.12em;font-size:1.12rem;color:#e9d6b0}.brand small{display:block;letter-spacing:.18em;color:var(--muted);font: .7rem Arial,sans-serif}.layout{display:grid;grid-template-columns:minmax(0,1fr) 285px;gap:18px}.panel{background:linear-gradient(145deg,#211b25ee,#17141bee);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);padding:22px}.side{display:flex;flex-direction:column;gap:14px}.eyebrow{font: .72rem Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}h1,h2,h3{line-height:1.25;margin:.35em 0 .65em;font-weight:normal}h1{font-size:clamp(2rem,5vw,3.6rem);letter-spacing:.07em;color:#ead9bd}h2{font-size:1.7rem;color:#ead9bd}h3{font-size:1.12rem;color:#d9c7a7}.lead{font-size:1.12rem;color:#d8cbd5}.muted{color:var(--muted)}.rule{height:1px;background:linear-gradient(90deg,transparent,var(--line),transparent);margin:20px 0}.actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}.choice-list{display:grid;gap:10px;margin-top:18px}.choice{display:flex;text-align:left;align-items:flex-start;gap:12px;padding:14px;background:#211b25;border:1px solid #514052}.choice .num{color:var(--gold);font-size:1.15rem}.choice span:last-child{flex:1}.choice b{display:block;font-weight:normal;color:#e9d7bd}.choice small{display:block;color:var(--muted);margin-top:3px}.stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.stat{background:#110f14;border:1px solid #332b37;padding:10px;border-radius:7px}.stat strong{display:block;font-size:1.1rem;font-weight:normal}.bar{height:7px;background:#332731;border-radius:10px;overflow:hidden;margin-top:7px}.bar i{display:block;height:100%;background:var(--red);transition:width .25s}.bar.mana i{background:#8b78bb}.bar.stamina i{background:#9b9b69}.tag{display:inline-block;padding:2px 8px;border:1px solid #57475b;border-radius:99px;color:#c7b6d0;font: .75rem Arial,sans-serif;margin:2px}.log{white-space:pre-line;color:#d8ced8}.story-art{min-height:115px;border:1px solid #433343;border-radius:8px;background:linear-gradient(120deg,#17121b,#2b1b28 55%,#15131a);display:flex;align-items:center;justify-content:center;text-align:center;padding:18px;margin:12px 0;color:#bfa7b9;font-size:1.2rem;letter-spacing:.1em}.story-art .sigil{font-size:2.4rem;color:#a96d78;display:block}.section-head{display:flex;justify-content:space-between;align-items:center;gap:8px}.inventory{display:flex;flex-wrap:wrap;gap:5px}.npc{padding:10px 0;border-bottom:1px solid #332a36}.npc:last-child{border:0}.npc b{color:#d9c6a4}.footer{font: .75rem Arial,sans-serif;color:#716675;text-align:center;padding:22px}.modal-back{position:fixed;inset:0;background:#08070be8;display:flex;align-items:center;justify-content:center;padding:16px;z-index:5}.modal{width:min(680px,100%);max-height:88vh;overflow:auto;background:#19151e;border:1px solid #665064;border-radius:12px;padding:22px;box-shadow:0 20px 70px #000}.slot{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid #392e3c}.slot:last-child{border:0}.slot p{margin:3px 0;color:var(--muted);font-size:.9rem}.empty{color:#756a79;font-style:italic}.input{width:100%;background:#100e13;color:var(--text);border:1px solid #5a485e;border-radius:6px;padding:11px}.class-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.class-card{padding:14px;text-align:left;min-height:135px}.class-card.selected{border-color:var(--gold);background:#3a2a35}.class-card strong{display:block;color:#e5d0a9;font-size:1.1rem}.class-card small{color:var(--muted)}.combat-head{display:flex;justify-content:space-between;gap:12px;align-items:start}.enemy{border:1px solid #70434e;background:#24151d;padding:14px;border-radius:8px;margin:14px 0}.enemy .bar i{background:#b54b5a}.battle-actions{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.battle-actions button{text-align:left}.battle-actions small{display:block;color:#c0aebf;font-size:.78rem}.notice{border-left:3px solid var(--gold);padding:8px 12px;background:#251f26;color:#d7c8b3;margin:12px 0}.ending{border:1px solid var(--gold);padding:22px;background:linear-gradient(145deg,#30212b,#151219);border-radius:10px}.hidden{display:none!important}
+@media(max-width:800px){.layout{grid-template-columns:1fr}.side{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.side .panel:first-child{grid-column:1/-1}.shell{padding:12px}.panel{padding:16px}.topbar{align-items:flex-start}.class-grid{grid-template-columns:1fr}.class-card{min-height:auto}.battle-actions{grid-template-columns:1fr 1fr}}
+@media(max-width:450px){.side{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.topbar{flex-direction:column}.battle-actions{grid-template-columns:1fr}.panel{padding:14px}}
+</style>
+</head>
+<body>
+<div class="shell">
+<header class="topbar"><div class="brand">黯境編年史 <small>CHRONICLES OF THE DUSKBOUND</small></div><div class="actions" style="margin:0"><button class="small" id="saveMenuBtn">存檔 / 讀檔</button><button class="small" id="codexBtn">結局圖鑑</button><button class="small" id="helpBtn">旅人手記</button></div></header>
+<div id="app"></div>
+<div class="footer">黯境編年史：失落王國 · 單檔離線冒險 · 你的選擇將留下痕跡</div>
+</div>
+<div id="modalRoot"></div>
+<script>
+(() => {
+'use strict';
+const VERSION=1, KEY_AUTO='duskbound_auto_v1', KEY_SLOTS='duskbound_slots_v1', KEY_ENDINGS='duskbound_endings_v1';
+const $=id=>document.getElementById(id);
+const escapeHTML=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const clamp=(v,min,max)=>Math.max(min,Math.min(max,v));
+const fresh=()=>({version:VERSION,screen:'intro',chapter:0,node:'intro',name:'無名者',job:'劍士',level:1,xp:0,hp:100,maxHp:100,mp:35,maxMp:35,st:5,maxSt:5,atk:13,def:5,coins:15,potions:2,herbs:1,shards:0,flags:{},relations:{伊芙琳:0,灰鴉:0,瑟琳:0},visited:[],history:[],turn:0,enemy:null,ending:null,dead:false});
+let G=fresh(), chosenJob='劍士', modalReturn=null;
+const classes={
+'劍士':{hp:125,mp:24,st:7,atk:15,def:8,desc:'堅忍近戰。格擋與重擊兼備，容錯較高。'},
+'法師':{hp:88,mp:65,st:4,atk:17,def:4,desc:'操縱黯火與結界。法力充沛，擅長破除敵人護盾。'},
+'遊俠':{hp:102,mp:38,st:6,atk:14,def:6,desc:'迅捷而精準。可觀察破綻、蓄勢一擊並迴避。'}
+};
+const chapters=[
+{title:'第一章：灰燼之門',subtitle:'被遺忘的王國邊境',art:'✦　灰燼在無風的夜裡向上飄　✦'},
+{title:'第二章：鐘下之城',subtitle:'每一聲鐘鳴，都少去一段記憶',art:'♜　黑鐘沉在城心，無人敢數第十三響　♜'},
+{title:'第三章：無月聖堂',subtitle:'真相被封存在血與祈禱之間',art:'☽　聖像沒有眼睛，卻看見所有罪　☽'},
+{title:'第四章：王座之下',subtitle:'王國的命運，從來不是王的命令',art:'♛　王座空著，影子卻仍在加冕　♛'}
+];
+function say(text){G.history.push(text);if(G.history.length>8)G.history.shift()}
+function setFlag(k,v=true){G.flags[k]=v}
+function has(k){return !!G.flags[k]}
+function changeRel(n,v){G.relations[n]=clamp((G.relations[n]||0)+v,-3,5)}
+function autoSave(){try{localStorage.setItem(KEY_AUTO,JSON.stringify(G))}catch(e){/* private mode / quota: game remains playable */}}
+function validSave(raw){try{let d=typeof raw==='string'?JSON.parse(raw):raw;if(!d||d.version!==VERSION||typeof d!=='object'||!d.flags||!d.relations||!Number.isFinite(d.hp)||!Number.isFinite(d.maxHp)||!['劍士','法師','遊俠'].includes(d.job))return null;d.hp=clamp(d.hp,0,Math.max(1,d.maxHp));d.mp=clamp(Number(d.mp)||0,0,Math.max(1,Number(d.maxMp)||1));d.chapter=clamp(Number(d.chapter)||0,0,3);if(!Array.isArray(d.history)||!Array.isArray(d.visited))return null;return d}catch(e){return null}}
+function loadAuto(){try{const d=validSave(localStorage.getItem(KEY_AUTO));if(d){G=d;return true}}catch(e){}return false}
+function getSlots(){try{let x=JSON.parse(localStorage.getItem(KEY_SLOTS)||'[]');return Array.isArray(x)?[0,1,2].map(i=>validSave(x[i])||null):[null,null,null]}catch(e){return [null,null,null]}}
+function putSlot(i){let slots=getSlots();slots[i]=JSON.parse(JSON.stringify(G));try{localStorage.setItem(KEY_SLOTS,JSON.stringify(slots));say('已將旅程寫入手動存檔 '+(i+1)+'。');render();}catch(e){alert('無法存檔：瀏覽器儲存空間可能已滿或被停用。')}}
+function readSlot(i){const s=getSlots()[i];if(!s)return;G=s;closeModal();say('你從存檔 '+(i+1)+' 繼續旅程。');render()}
+function getEndings(){try{const e=JSON.parse(localStorage.getItem(KEY_ENDINGS)||'[]');return Array.isArray(e)?[...new Set(e.filter(x=>typeof x==='string'))]:[]}catch(e){return []}}
+function unlockEnding(id){try{localStorage.setItem(KEY_ENDINGS,JSON.stringify([...new Set([...getEndings(),id])]))}catch(e){}}
+const endingData={
+'ember':'灰燼王冠','描述':'你將王冠投入古井。王國沒有立刻復甦，但第一場真正的雨落在灰燼之上。你選擇讓人民自己決定未來。','hint':'拒絕重戴王冠，並在終局選擇毀去它。',
+'crown':'無光君主','描述':'你戴上王冠，讓影子成為法律。道路重新安全，鐘聲不再失控；然而每一扇窗後，都有人學會了不再說真話。','hint':'在終局選擇承接王冠的力量。',
+'mercy':'黎明的契約','描述':'你沒有殺死王座下的古老意志，而是迫使它交出名字。瑟琳以最後的祈禱封住裂隙，新的黎明因此有了代價，也有了希望。','hint':'取得聖堂真名，並在終局選擇與古老意志立約。',
+'secret':'第十三聲','描述':'你把三枚記憶碎片放回黑鐘，並讓灰鴉說出自己真正的名字。第十三聲沒有響起——因為它一直在你的心中。你走進鐘影之外的世界。','hint':'找到三枚碎片、與灰鴉建立信任，並解開黑鐘的秘密。',
+'death':'無名墓誌','描述':'黑暗收回了你的呼吸。你的故事停在此處，但手動存檔仍被保留。墓誌上沒有名字，只有你曾走過的路。','hint':'在戰鬥中生命值歸零。死亡不會覆蓋手動存檔。'
+};
+function expGain(n){G.xp+=n;if(G.xp>=G.level*20){G.xp-=G.level*20;G.level++;G.maxHp+=8;G.maxMp+=5;G.atk+=2;G.def+=1;G.hp=Math.min(G.maxHp,G.hp+20);G.mp=Math.min(G.maxMp,G.mp+12);say('你升至 '+G.level+' 級。新的力量在傷痕中甦醒。')}}
+function begin(name,job){G=fresh();G.name=name.trim().slice(0,22)||'無名者';G.job=job;Object.assign(G,classes[job]);G.maxHp=classes[job].hp;G.maxMp=classes[job].mp;G.maxSt=classes[job].st;G.screen='story';G.chapter=0;G.node='gate';say('旅程開始。');render()}
+function go(node,chapter){G.node=node;if(chapter!==undefined)G.chapter=chapter;if(!G.visited.includes(node))G.visited.push(node);autoSave();render()}
+function choice(title,desc,fn){return `<button class="choice" data-action="${fn}"><span class="num">✦</span><span><b>${title}</b><small>${desc}</small></span></button>`}
+function scene(title,body,choices,art){return `<section class="panel"><div class="eyebrow">${chapters[G.chapter]?.title||'旅程'}</div><h2>${title}</h2>${art?`<div class="story-art"><div><span class="sigil">${art}</span>${chapters[G.chapter]?.art||''}</div></div>`:''}<div class="log">${body}</div><div class="choice-list">${choices.join('')}</div></section>`}
+function startBattle(id){const enemies={
+'warden':{name:'灰燼守門者',hp:58,maxHp:58,atk:12,def:3,mechanic:'守門者會在蓄力後施展裂地重擊。蓄力回合可格擋或打斷。',phase:0,kind:'charge'},
+'bell':{name:'無面鐘侍',hp:76,maxHp:76,atk:10,def:4,mechanic:'鐘侍每三回合敲鐘，若未打斷便奪走你的法力與生命。',phase:0,kind:'bell'},
+'king':{name:'空王・奧斯溫',hp:105,maxHp:105,atk:13,def:5,mechanic:'空王會輪替護盾、咒印與斬擊。觀察狀態，選擇適當行動。',phase:0,kind:'king'}
+};G.enemy={...enemies[id],id,guard:0};G.screen='battle';G.turn=0;say('戰鬥開始：'+G.enemy.name+'。');render()}
+function playerDamage(base){return Math.max(2,Math.floor(base+Math.random()*5-G.enemy.def))}
+function enemyTurn(){
+ if(!G.enemy||G.hp<=0)return;
+ let e=G.enemy;G.turn++;
+ if(e.kind==='charge'&&e.phase===1){const dmg=Math.max(2,e.atk+7-G.def-(e.guard||0));G.hp-=dmg;e.phase=0;say(`守門者的裂地重擊造成 ${dmg} 點傷害。`)}
+ else if(e.kind==='bell'&&G.turn%3===0){if(e.phase===2){say('你打斷鐘聲，黑鐘的回音反噬鐘侍！');e.hp-=12;e.phase=0}else{let dmg=12;G.hp-=dmg;G.mp=Math.max(0,G.mp-8);say(`第 ${G.turn} 回合鐘聲震盪：你失去 ${dmg} 生命與 8 法力。`)}}
+ else if(e.kind==='king'&&e.phase===1){G.hp-=Math.max(3,e.atk+6-G.def);G.mp=Math.max(0,G.mp-5);say('空王引爆咒印，暗火灼傷你的身心。');e.phase=0}
+ else {let dmg=Math.max(1,e.atk+Math.floor(Math.random()*5)-G.def-(G.guard||0));G.hp-=dmg;say(`${e.name} 攻擊你，造成 ${dmg} 點傷害。`);G.guard=0;
+  if(e.kind==='charge'&&Math.random()<.48){e.phase=1;say('守門者俯身蓄力，地面開始震動！')}
+  if(e.kind==='bell'&&G.turn%3===2){e.phase=1;say('鐘侍舉起手臂，黑鐘即將敲響！')}
+  if(e.kind==='king'&&G.turn%3===1){e.phase=1;say('空王在你身上刻下咒印！')}
+ }
+ if(G.hp<=0){G.hp=0;finishEnding('death');return}
+ if(e.hp<=0){winBattle();return}
+ autoSave();render()
+}
+function battleAction(action){
+ if(G.screen!=='battle'||!G.enemy||G.hp<=0)return;
+ const e=G.enemy;let cost=0;
+ if(action==='attack'){let dmg=playerDamage(G.atk);if(G.job==='遊俠'&&has('aim')){dmg+=8;G.flags.aim=false}if(e.kind==='king'&&e.phase===2)dmg+=5;e.hp-=dmg;say(`你發動攻擊，造成 ${dmg} 點傷害。`)}
+ else if(action==='heavy'){cost=2;if(G.st<cost){say('體力不足，無法重擊。');render();return}G.st-=cost;let dmg=playerDamage(G.atk*1.75);if(e.kind==='charge'&&e.phase===1){dmg+=12;e.phase=0;say('你抓準蓄力破綻，重擊打斷了守門者！')}e.hp-=dmg;say(`重擊造成 ${dmg} 點傷害。`)}
+ else if(action==='spell'){if(G.mp<12){say('法力不足。');render();return}G.mp-=12;let dmg=G.atk+15+Math.floor(Math.random()*6)-e.def;if(e.kind==='king'&&e.phase===2){dmg+=12;e.phase=0;say('黯火撕開空王的護盾！')}e.hp-=Math.max(3,dmg);say(`你釋放黯火，造成 ${Math.max(3,dmg)} 點傷害。`)}
+ else if(action==='guard'){G.hp=Math.min(G.maxHp,G.hp+3);G.guard=G.def+9;say('你架起防勢，下一次受到的傷害降低。');G.st=Math.min(G.maxSt,G.st+2)}
+ else if(action==='dodge'){if(G.job!=='遊俠'&&G.st<1){say('體力不足。');render();return}G.st=Math.max(0,G.st-1);G.guard=G.def+20;say('你側身閃避，預判下一次攻擊。');if(e.kind==='bell'&&e.phase===1){e.phase=2;say('你趁鐘侍蓄力時逼近，準備打斷鐘聲。')}}
+ else if(action==='focus'){G.mp=Math.min(G.maxMp,G.mp+14);G.st=Math.min(G.maxSt,G.st+2);if(e.kind==='king'&&e.phase===1){e.phase=0;say('你以專注穩住心神，抹去咒印。')}else say('你屏息凝神，恢復法力與體力。')}
+ else if(action==='potion'){if(G.potions<1){say('藥水已用完。');render();return}G.potions--;G.hp=Math.min(G.maxHp,G.hp+38);say('你飲下治療藥水，恢復 38 點生命。')}
+ if(G.hp<=0){finishEnding('death');return}
+ if(e.hp<=0){winBattle();return}
+ enemyTurn()
+}
+function winBattle(){const id=G.enemy.id;G.enemy=null;G.screen='story';G.hp=Math.max(1,G.hp);G.st=Math.min(G.maxSt,G.st+2);expGain(id==='king'?35:22);
+ if(id==='warden'){setFlag('wardenWon');G.shards++;say('守門者化為灰燼，第一枚記憶碎片落入掌心。');G.node='afterWarden'}
+ if(id==='bell'){setFlag('bellWon');G.shards++;say('鐘侍倒下，第二枚記憶碎片在鐘聲中浮現。');G.node='afterBell'}
+ if(id==='king'){setFlag('kingWon');G.shards++;say('空王的護盾碎裂，王座終於顯露真貌。');G.node='finalChoice'}
+ autoSave();render()}
+function finishEnding(id){G.ending=id;G.screen='ending';G.dead=id==='death';unlockEnding(id);if(id==='death'){say('你的旅程在黑暗中終止。手動存檔未受影響。')}else say('結局解鎖：'+endingData[id].title);G.enemy=null;autoSave();render()}
+function resolveFinal(pick){
+ if(pick==='crown'){finishEnding('crown');return}
+ if(pick==='destroy'){if(G.shards>=2){finishEnding('ember')}else{setFlag('crownRefused');finishEnding('ember')}return}
+ if(pick==='pact'){if(has('trueName')&&G.relations['瑟琳']>=2){finishEnding('mercy')}else{say('缺少真名或瑟琳的信任，契約無法成立。');render()}return}
+ if(pick==='secret'){if(G.shards>=3&&G.relations['灰鴉']>=3&&has('bellSecret'))finishEnding('secret');else{say('黑鐘仍拒絕回應：你需要三枚碎片、灰鴉的信任與鐘的秘密。');render()}}
+}
+function renderStory(){
+ const n=G.node;
+ if(n==='intro')return `<section class="panel"><div class="eyebrow">一段關於記憶、王權與代價的故事</div><h1>黯境編年史<br><span style="color:#b87580">失落王國</span></h1><div class="story-art"><div><span class="sigil">♜</span>在第十二次日蝕之後，王國失去了黎明。</div></div><p class="lead">黑鐘在地底鳴響，死者開始記得自己未曾活過的事。你是唯一仍能聽見鐘聲、卻沒有失去名字的人。</p><p class="muted">四章主線 · 單人回合戰鬥 · 多重分歧 · 五種結局</p><div class="actions"><button class="primary" data-action="new">開始新旅程</button><button data-action="continue">繼續自動存檔</button><button data-action="slots">手動存檔 / 讀檔</button></div></section>`;
+ if(n==='gate')return scene('灰燼之門',`你抵達王國邊境時，天空正落下細碎的灰。城門前，一名披著破斗篷的女子攔住你。她自稱伊芙琳，是曾替王室抄寫命令的史官。\n\n「王都不在地圖上了。」她低聲說，「你若要找回它，就得決定先救人，還是先追尋真相。」`,[
+choice('先救難民','消耗時間，但能贏得伊芙琳的信任。','helpRefugees'),
+choice('追查黑鐘的痕跡','獲得線索與記憶碎片的共鳴。','investigateBell'),
+choice('質問伊芙琳的隱瞞','她會說出一部分王室祕密。','confrontEvelyn'),
+choice('迎戰灰燼守門者','挑戰第一場主要戰鬥，獲得記憶碎片。','fightWarden')
+],'♜');
+ if(n==='refugees')return scene('灰燼中的名字',`你協助難民越過倒塌的石橋。每一張臉都像被同一場夢磨去了輪廓。伊芙琳把一枚銅製徽記交給你。\n\n「若你走到王座前，請記得：王國不是城牆，是還願意彼此記住的人。」`,[choice('帶著徽記前往鐘下之城','伊芙琳對你的信任加深。','toCity')],'✧');
+ if(n==='bellClue')return scene('地底回音',`你在塌陷的瞭望塔下找到一段刻痕：三枚碎片可讓黑鐘停止，但只有說出鐘的真名，才能讓它不再重響。你收下一片被燒黑的記憶碎片。`,[choice('循著鐘聲前往王都','你已掌握部分祕密。','toCity')],'☽');
+ if(n==='evelynTruth')return scene('史官的罪',`伊芙琳承認，她曾替國王刪去一整座村莊的名字，讓那場屠殺從史冊消失。她不求原諒，只把記載真相的紙頁交給你。`,[choice('接受證詞，繼續前進','真相可能比復仇更有用。','toCity')],'✧');
+ if(n==='city')return scene('第二章：鐘下之城',`王都的街道向地底傾斜，所有窗戶都用黑布封住。你遇見灰鴉，一名在鐘塔間穿行的竊賊。他知道一條通往無月聖堂的路，卻要你先幫他取回被鐘侍奪走的名字。\n\n伊芙琳提醒你，城中仍有人相信王室能帶來秩序。你可以選擇安撫他們，也可以揭露王室的罪。`,[
+choice('幫灰鴉找回名字','建立信任，解鎖黑鐘的秘密線索。','helpRaven'),
+choice('公開王室罪證','揭露真相，獲得瑟琳的聯絡方式。','exposeCrown'),
+choice('向城民承諾恢復王權','取得補給，但黑暗會記住你的承諾。','promiseCrown'),
+choice('挑戰無面鐘侍','第二場主要戰鬥：觀察鐘鳴節奏並打斷它。','fightBell')
+],'♟');
+ if(n==='raven')return scene('竊名者',`你從鐘侍的記憶匣中取回一張空白紙。灰鴉把紙貼在喉嚨上，片刻後，低聲說出自己的真名：「阿斯特。」\n\n「我欠你一次。」他說。他告訴你，黑鐘的第十三聲不是聲音，而是一個被藏起來的名字。`,[choice('記下這個名字，前往聖堂','灰鴉開始信任你。','toSanctum')],'☽');
+ if(n==='expose')return scene('被撕開的史冊',`你把王室罪證釘在鐘下廣場。人們沒有歡呼，只有沉默。遠處的聖堂傳來一聲不屬於任何鐘的回響。瑟琳修女派人送來一枚銀線符記。`,[choice('帶著符記前往聖堂','瑟琳願意聽你說話。','toSanctum')],'✧');
+ if(n==='promise')return scene('秩序的代價',`城民交給你一袋藥水與銀幣，卻要求你承諾讓王室重掌王座。你收下資源，知道每一份承諾都會成為枷鎖。`,[choice('前往無月聖堂','王權之路已在你腳下。','toSanctum')],'♜');
+ if(n==='sanctum')return scene('第三章：無月聖堂',`聖堂沒有月光，只有懸在半空的燭火。瑟琳修女站在無眼聖像前，說她曾聽見古老意志在空王的夢中低語。\n\n她能替你解開王座封印，但需要你交出一段珍貴記憶。若你願意相信她，便能知道古老意志的真名；若不願，則可以帶著未完成的答案直接進入王座之下。`,[
+choice('交出一段記憶，換取真名','瑟琳的信任加深，解鎖契約結局條件。','trustSerin'),
+choice('拒絕代價，尋找聖堂暗室','可能找到第三枚碎片與隱藏線索。','searchSanctum'),
+choice('強行破開封印','立刻前往王座，但會受傷。','forceSeal')
+],'☾');
+ if(n==='serin')return scene('真名的重量',`你將一段童年的記憶放進銀碗。燭火變成白色，瑟琳說出古老意志的真名：「伊薩爾。」她沒有問你是否後悔，只將手放在你的額頭上，讓你短暫看見日蝕前的天空。`,[choice('前往王座之下','真名已被記住。','toThrone')],'✧');
+ if(n==='sanctumSecret')return scene('暗室中的第三枚碎片',`暗室牆面刻著一個名字，字跡竟與你的筆跡相同。你拾起第三枚記憶碎片，並在祭壇底部發現一個機括：第十三聲可以被拒絕，而非被擊敗。`,[choice('帶著碎片前往王座','隱藏道路已經開啟。','toThrone')],'☽');
+ if(n==='forced')return scene('封印的裂口',`你用武力撕開封印，碎石與黑火一同落下。你受到 12 點傷害，但王座的道路已經敞開。`,[choice('不再回頭','前往最後的試煉。','toThrone')],'♜');
+ if(n==='throne')return scene('第四章：王座之下',`王座下方沒有地基，只有一片被星光照亮的深淵。空王奧斯溫坐在倒置的王冠裡，聲音像許多死者同時說話。\n\n「我把王國交給黑暗，是因為人民害怕自由。」他伸出手。「殺了我，你會成為我；拒絕我，你將承擔一個沒有答案的世界。」`,[choice('迎戰空王','用戰鬥打破最後的封印。','fightKing')],'♛');
+ if(n==='afterWarden')return scene('守門者的殘響',`守門者倒下後，你看見它盔甲裡藏著一張孩子的畫。畫上是一座沒有城牆的王都。灰燼散去，前往王都的道路顯現。`,[choice('走進鐘下之城','進入第二章。','toCity')],'✧');
+ if(n==='afterBell')return scene('鐘聲停止的一瞬',`鐘侍倒下，黑鐘第一次安靜。你在它的裂縫裡看見自己的倒影——倒影比你更早一步眨眼。第三枚碎片的方向指向無月聖堂。`,[choice('前往無月聖堂','進入第三章。','toSanctum')],'☽');
+ if(n==='finalChoice')return scene('王座的最後選擇',`空王已倒下，王冠卻仍懸浮在你面前。黑暗不再命令你，只等待你為它命名。\n\n${G.shards>=3?'三枚記憶碎片在你掌心發光。':''}${has('trueName')?'古老意志的真名仍在你舌尖。':''}`,[
+choice('毀去王冠','讓王國在不確定中重新開始。','endingDestroy'),
+choice('戴上王冠','以自己的意志承接王權。','endingCrown'),
+choice('說出伊薩爾的真名，立下契約','需要真名與瑟琳的信任。','endingPact'),
+choice('讓黑鐘聽見第十三聲','隱藏選項：需要三碎片、灰鴉信任與鐘的秘密。','endingSecret')
+],'♛');
+ return `<section class="panel"><h2>旅程中斷</h2><p>目前故事節點無法辨識。請讀取存檔或開始新旅程。</p><button data-action="slots">存檔 / 讀檔</button></section>`;
+}
+function renderBattle(){const e=G.enemy;if(!e)return renderStory();return `<section class="panel"><div class="eyebrow">單人戰鬥 · 第 ${G.turn+1} 回合</div><div class="combat-head"><div><h2>${escapeHTML(e.name)}</h2><p class="muted">${e.mechanic}</p></div><span class="tag">${e.kind==='charge'?'蓄力破綻':e.kind==='bell'?'鐘鳴循環':'咒印輪替'}</span></div><div class="enemy"><div class="section-head"><strong>敵方生命</strong><span>${Math.max(0,e.hp)} / ${e.maxHp}</span></div><div class="bar"><i style="width:${clamp(e.hp/e.maxHp*100,0,100)}%"></i></div>${e.phase===1?'<div class="notice">危險：敵人正在蓄力 / 咒印即將引爆。格擋、閃避或使用適當技能！</div>':''}${e.phase===2?'<div class="notice">破綻：你有機會打斷鐘聲！</div>':''}</div><div class="rule"></div><h3>你的行動</h3><div class="battle-actions">
+<button data-action="attack">⚔ 普通攻擊<small>穩定傷害，不消耗資源</small></button><button data-action="heavy">✦ 重擊<small>消耗 2 體力，造成高傷害</small></button>
+<button data-action="spell">☄ 黯火術<small>消耗 12 法力，可破除空王護盾</small></button><button data-action="guard">⛨ 格擋<small>降低下一次傷害，恢復少量體力</small></button>
+<button data-action="dodge">➶ 閃避<small>大幅降低下一次傷害；可預判鐘鳴</small></button><button data-action="focus">◉ 專注<small>恢復法力與體力，部分狀態可被化解</small></button>
+<button data-action="potion" ${G.potions<1?'disabled':''}>⚗ 治療藥水（${G.potions}）<small>恢復 38 點生命</small></button></div><div class="rule"></div><h3>戰鬥紀錄</h3><div class="log">${G.history.slice(-4).map(escapeHTML).join('\n')}</div></section>`}
+function renderEnding(){let e=endingData[G.ending]||endingData.death;return `<section class="panel"><div class="ending"><div class="eyebrow">${G.ending==='death'?'旅程終止':'結局已解鎖'}</div><h1>${escapeHTML(e.title)}</h1><p class="lead">${escapeHTML(e.描述)}</p><div class="rule"></div><p class="muted">解鎖提示：${escapeHTML(e.hint)}</p></div><div class="actions"><button class="primary" data-action="new">開啟新旅程</button><button data-action="slots">讀取手動存檔</button><button data-action="codex">查看結局圖鑑</button><button data-action="menu">返回主選單</button></div><p class="muted">本次結局已記錄。${G.ending==='death'?'死亡結局不會覆蓋你的手動存檔。':'新旅程不會清除已解鎖結局。'}</p></section>`}
+function renderSide(){if(G.screen==='intro'||G.screen==='ending')return `<aside class="side"><section class="panel"><div class="eyebrow">編年史</div><h3>失落王國</h3><p class="muted">日蝕之後，名字是最後一種自由。</p><div class="rule"></div><span class="tag">四章主線</span><span class="tag">五種結局</span><span class="tag">離線存檔</span></section><section class="panel"><h3>旅人手記</h3><p class="muted">選擇會改變關係、資源與結局條件。戰鬥中觀察敵人的蓄力與狀態。</p></section></aside>`;
+return `<aside class="side"><section class="panel"><div class="section-head"><div><div class="eyebrow">旅人狀態</div><h3 style="margin-bottom:0">${escapeHTML(G.name)}</h3></div><span class="tag">${G.job} · Lv.${G.level}</span></div><div class="rule"></div><div class="stats"><div class="stat"><span class="muted">生命</span><strong>${G.hp} / ${G.maxHp}</strong><div class="bar"><i style="width:${G.hp/G.maxHp*100}%"></i></div></div><div class="stat"><span class="muted">法力</span><strong>${G.mp} / ${G.maxMp}</strong><div class="bar mana"><i style="width:${G.mp/G.maxMp*100}%"></i></div></div><div class="stat"><span class="muted">體力</span><strong>${G.st} / ${G.maxSt}</strong><div class="bar stamina"><i style="width:${G.st/G.maxSt*100}%"></i></div></div><div class="stat"><span class="muted">經驗 / 銀幣</span><strong>${G.xp} XP · ${G.coins} 枚</strong></div></div><div class="rule"></div><div class="section-head"><h3>行囊</h3><span class="muted">碎片 ${G.shards}/3</span></div><div class="inventory"><span class="tag">治療藥水 ×${G.potions}</span><span class="tag">草藥 ×${G.herbs}</span></div><div class="actions"><button class="small" data-action="useHerb" ${G.herbs<1||G.hp>=G.maxHp?'disabled':''}>使用草藥</button><button class="small" data-action="saveNow">快速存檔</button></div></section><section class="panel"><h3>人物關係</h3>${Object.entries(G.relations).map(([n,v])=>`<div class="npc"><div class="section-head"><b>${n}</b><span class="muted">${v>0?'+':''}${v}</span></div><div class="bar"><i style="width:${clamp((v+3)/8*100,0,100)}%;background:${v>=2?'#789d85':'#987082'}"></i></div></div>`).join('')}<p class="muted" style="font-size:.85rem">人物不會加入戰鬥隊伍，但他們的信任會影響故事。</p></section><section class="panel"><h3>旅程紀錄</h3><div class="log" style="font-size:.88rem">${G.history.slice(-3).map(escapeHTML).join('\n')||'尚無紀錄。'}</div></section></aside>`}
+function render(){if(G.screen!=='intro'&&G.screen!=='ending'&&G.hp<=0){finishEnding('death');return}let main=G.screen==='intro'?renderStory():G.screen==='battle'?renderBattle():G.screen==='ending'?renderEnding():renderStory();$('app').innerHTML=`<div class="layout"><main>${main}</main>${renderSide()}</div>`;document.querySelectorAll('[data-action]').forEach(b=>b.addEventListener('click',()=>act(b.dataset.action)));autoSave()}
+function act(a){
+ switch(a){
+ case 'new':showNewGame();break;case 'continue':if(loadAuto()){render()}else alert('找不到有效的自動存檔。');break;case 'slots':showSlots();break;case 'saveNow':showSlots(true);break;case 'codex':showCodex();break;case 'menu':G=fresh();render();break;
+ case 'help':showHelp();break;
+ case 'helpRefugees':changeRel('伊芙琳',2);G.potions++;setFlag('savedRefugees');go('refugees');break;
+ case 'investigateBell':G.shards++;setFlag('bellClue');go('bellClue');break;
+ case 'confrontEvelyn':setFlag('evelynTruth');changeRel('伊芙琳',-1);go('evelynTruth');break;
+ case 'toCity':G.chapter=1;go('city',1);break;
+ case 'helpRaven':changeRel('灰鴉',3);setFlag('bellSecret');G.coins+=5;go('raven',1);break;
+ case 'exposeCrown':setFlag('exposedCrown');changeRel('瑟琳',1);go('expose',1);break;
+ case 'promiseCrown':setFlag('promisedCrown');G.potions++;G.coins+=10;go('promise',1);break;
+ case 'toSanctum':G.chapter=2;go('sanctum',2);break;
+ case 'trustSerin':if(G.hp>12)G.hp-=12;setFlag('trueName');changeRel('瑟琳',3);go('serin',2);break;
+ case 'searchSanctum':G.shards++;setFlag('sanctumSecret');go('sanctumSecret',2);break;
+ case 'forceSeal':G.hp=Math.max(1,G.hp-12);setFlag('forcedSeal');go('forced',2);break;
+ case 'toThrone':G.chapter=3;go('throne',3);break;
+ case 'fightWarden':startBattle('warden');break;case 'fightBell':startBattle('bell');break;case 'fightKing':startBattle('king');break;
+ case 'endingDestroy':resolveFinal('destroy');break;case 'endingCrown':resolveFinal('crown');break;case 'endingPact':resolveFinal('pact');break;case 'endingSecret':resolveFinal('secret');break;
+ case 'attack':case 'heavy':case 'spell':case 'guard':case 'dodge':case 'focus':case 'potion':battleAction(a);break;
+ case 'useHerb':if(G.herbs>0){G.herbs--;G.hp=Math.min(G.maxHp,G.hp+22);say('使用草藥，恢復 22 點生命。');render()}break;
+ }
+}
+function showNewGame(){modalReturn=G.screen;$('modalRoot').innerHTML=`<div class="modal-back"><div class="modal"><div class="eyebrow">新旅程</div><h2>選擇你的命運</h2><label for="heroName">角色名稱</label><input id="heroName" class="input" maxlength="22" placeholder="輸入旅人的名字" value="${G.screen==='intro'?'':'旅人'}"><div class="rule"></div><label>選擇職業</label><div class="class-grid">${Object.entries(classes).map(([name,c])=>`<button class="class-card ${name===chosenJob?'selected':''}" data-job="${name}"><strong>${name}</strong><small>${c.desc}</small><div class="muted" style="margin-top:8px;font-size:.8rem">生命 ${c.hp} · 法力 ${c.mp} · 攻擊 ${c.atk}</div></button>`).join('')}</div><div class="notice">開始新旅程會重置本局進度，但不會清除手動存檔或已解鎖結局。</div><div class="actions"><button class="primary" id="beginBtn">踏入黯境</button><button id="cancelNew">返回</button></div></div></div>`;
+document.querySelectorAll('[data-job]').forEach(b=>b.onclick=()=>{chosenJob=b.dataset.job;document.querySelectorAll('[data-job]').forEach(x=>x.classList.toggle('selected',x===b))});$('beginBtn').onclick=()=>{const name=$('heroName').value;closeModal();begin(name,chosenJob)};$('cancelNew').onclick=closeModal}
+function showSlots(saveOnly=false){const slots=getSlots();$('modalRoot').innerHTML=`<div class="modal-back"><div class="modal"><div class="eyebrow">旅程管理</div><h2>手動存檔 / 讀檔</h2><p class="muted">共三個手動欄位。死亡結局只會寫入自動存檔，不會覆蓋手動存檔。</p>${slots.map((s,i)=>`<div class="slot"><div><b>存檔欄位 ${i+1}</b><p>${s?`${escapeHTML(s.name)} · ${s.job} · 第 ${s.chapter+1} 章 · ${s.screen==='ending'?'已結局':`生命 ${s.hp}/${s.maxHp}`} `:'空欄位'}</p><p>${s?escapeHTML((s.history||[]).slice(-1)[0]||'旅程已記錄'):'尚無存檔'}</p></div><div class="actions" style="margin:0">${!saveOnly?`<button class="small" data-load="${i}" ${s?'':'disabled'}>讀取</button>`:''}<button class="small gold" data-save="${i}">儲存</button></div></div>`).join('')}<div class="actions"><button id="closeSlots">關閉</button></div></div></div>`;
+document.querySelectorAll('[data-load]').forEach(b=>b.onclick=()=>readSlot(+b.dataset.load));document.querySelectorAll('[data-save]').forEach(b=>b.onclick=()=>putSlot(+b.dataset.save));$('closeSlots').onclick=closeModal}
+function showCodex(){const unlocked=getEndings();$('modalRoot').innerHTML=`<div class="modal-back"><div class="modal"><div class="eyebrow">編年史附錄</div><h2>結局圖鑑</h2><p class="muted">已解鎖 ${unlocked.length} / ${Object.keys(endingData).length} 種結局。未解鎖的結局只顯示線索。</p>${Object.entries(endingData).map(([id,e])=>`<div class="slot"><div><b>${unlocked.includes(id)?'◆ '+e.title:'◇ 未知結局'}</b><p>${unlocked.includes(id)?escapeHTML(e.描述):escapeHTML(e.hint)}</p></div><span class="tag">${unlocked.includes(id)?'已解鎖':'未發現'}</span></div>`).join('')}<div class="actions"><button id="closeCodex">關閉</button></div></div></div>`;$('closeCodex').onclick=closeModal}
+function showHelp(){$('modalRoot').innerHTML=`<div class="modal-back"><div class="modal"><div class="eyebrow">旅人手記</div><h2>如何遊玩</h2><p>故事中的每個選項都會改變旗標、資源或人物關係。戰鬥為單人回合制，敵人會在特定回合蓄力、敲鐘或施加咒印；善用格擋、閃避、專注與黯火術。</p><ul><li>劍士：生命與防禦較高，適合正面交鋒。</li><li>法師：法力充沛，黯火術傷害穩定。</li><li>遊俠：可用閃避應對危險，適合尋找破綻。</li><li>自動存檔會隨進度更新；手動存檔有三格。</li><li>死亡會解鎖死亡結局，不會抹除手動存檔。</li></ul><p class="muted">提示：三枚記憶碎片、灰鴉的信任與黑鐘秘密，可能開啟不尋常的道路。</p><div class="actions"><button id="closeHelp">明白了</button></div></div></div>`;$('closeHelp').onclick=closeModal}
+function closeModal(){$('modalRoot').innerHTML=''}
+$('saveMenuBtn').onclick=()=>showSlots();$('codexBtn').onclick=showCodex;$('helpBtn').onclick=showHelp;
+if(!loadAuto())G=fresh();
+if(G.screen==='battle'&&(!G.enemy||G.hp<=0)){if(G.hp<=0){G.hp=0;finishEnding('death')}else{G.screen='story';G.node='throne'}}
+render();
+})();
+</script>
+</body>
+</html>
